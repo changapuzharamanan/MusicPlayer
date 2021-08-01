@@ -168,8 +168,6 @@ class MusicPlayer(object):
         group_call = self.group_call
         if group_call.is_connected:
             playlist.clear()   
-            group_call.input_filename = ''
-            await group_call.stop()
         process = FFMPEG_PROCESSES.get(CHAT)
         if process:
             try:
